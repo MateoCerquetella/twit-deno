@@ -12,15 +12,6 @@ export class TwitterRestApi {
     this.oauth_token = key.access_Token;
     this.oauth_token_secret = key.access_Token_Secret;
   }
-
-  createNonce(): string {
-    const chars = [..."abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"];
-    return [...Array(42)].map(i => chars[Math.random()*chars.length|0]).join('');
-  }
-
-  createTimestamp(): number {
-    return Math.floor(Date.now() / 1000);
-  }
   
   oauthParams = {
     oauth_consumer_key: this.oauth_consumer_key,
@@ -29,6 +20,21 @@ export class TwitterRestApi {
     oauth_timestamp: this.createTimestamp(),
     oauth_token: this.oauth_token,
     oauth_version: '1.0',
+  }
+
+  private createNonce(): string {
+    const chars = [..."abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"];
+    return [...Array(42)].map(i => chars[Math.random()*chars.length|0]).join('');
+  }
+
+  private createTimestamp(): number {
+    return Math.floor(Date.now() / 1000);
+  }
+
+  private createPercentEncode(str: string): string {
+    return encodeURIComponent(str)
+      .replace(/[!'()]/g, escape)
+      .replace(/\*/g, '%2A')
   }
   
 }
