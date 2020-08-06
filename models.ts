@@ -1,6 +1,6 @@
 export interface AccessKey {
-    consumer_Key: string;
-    consumer_Secret: string;
-    access_Token: string;
-    access_Token_Secret: string;
+    consumer_Key?: string | null;
+    consumer_Secret?: string | null;
+    access_Token?: string | null;
+    access_Token_Secret?: string | null;
 }
