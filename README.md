@@ -18,7 +18,7 @@ Port of [twit](https://github.com/ttezel/twit) library to Deno.
 ```javascript
 import { config } from "https://deno.land/x/dotenv/mod.ts";
 // directly from github
-import SimpleTwitter from "https://raw.githubusercontent.com/mateocerquetella/simple_twitter/simple_twitter.ts";
+import SimpleTwitter from "https://raw.githubusercontent.com/MateoCerquetella/simple_twitter_deno/simple_twitter.ts";
 
 config({
   path: "./example/.env",
