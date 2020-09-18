@@ -17,12 +17,11 @@ Port of[twit](https://github.com/ttezel/twit) library to Deno.
 
 ```javascript
 import { config } from "https://deno.land/x/dotenv/mod.ts";
-import SimpleTwitter from "https://deno.land/x/simple_twitter_deno@0.0.1/simple_twitter.ts";
+import SimpleTwitter from "https://deno.land/x/simple_twitter_deno@0.02/simple_twitter_deno.ts";
 // directly from github
-import SimpleTwitter from "https://raw.githubusercontent.com/MateoCerquetella/simple_twitter_deno/simple_twitter.ts";
-
+// import SimpleTwitter from "https://raw.githubusercontent.com/MateoCerquetella/simple_twitter_deno/simple_twitter_deno.ts";
 config({
-  path: "./example/.env",
+  path: "./config/.env",
   export: true,
 });
 
