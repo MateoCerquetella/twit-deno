@@ -2,7 +2,7 @@
 
 Simple GET and POST methods using the new Deno framework sending authorized requests to the Twitter API.
 
-Port of[twit](https://github.com/ttezel/twit) library to Deno.
+Port of [twit](https://github.com/ttezel/twit) library to Deno.
 
 ## Features
 
